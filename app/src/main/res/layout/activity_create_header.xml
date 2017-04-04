@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.Toolbar  xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_centerVertical="true"
+    tools:context="com.example.lenovo.yijiantable.CreateHeader"
     >
+    <include layout="@layout/activity_titile_layout"/>
     <TextView
+        android:id="@+id/tTip_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:text="@string/app_name"/>
-</android.support.v7.widget.Toolbar>
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:textColor="@color/Black"
+        android:text="确认表头信息"
+        android:layout_marginTop="@dimen/activity_vertical_margin"/>
+    <ScrollView
+        android:id="@+id/ScrollV"
+        android:layout_width="@dimen/ListWeight"
+        android:layout_height="@dimen/ListHeight"
+        android:padding="1px"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:id="@+id/liner"
+            android:layout_width="@dimen/ListWeight"
+            android:layout_height="@dimen/ListHeight"
+            android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <ImageButton
+            android:id="@+id/xiugai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ch_xiugai"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_gravity="center"
+            />
+        <ImageButton
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ch_ok"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</LinearLayout>
+
 
 
