@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/mainColorPink</item>
+        <item name="colorPrimaryDark">@color/mainColorWhite</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <!--弹出框弹出效果-->
+    <style name="take_photo_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@animator/pop_enter_anim</item>
+        <item name="android:windowExitAnimation">@animator/pop_exit_anim</item>
+    </style>
+
+</resources>

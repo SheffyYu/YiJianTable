@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_navigation_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mainColorWhite"
+    android:orientation="horizontal"
+    tools:context="com.example.lenovo.yijiantable.NavigationBar">
+
+
+        <TextView
+            android:id="@+id/txv_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+            android:drawablePadding="0dp"
+            android:drawableTop="@drawable/tab_menu_home"
+            android:gravity="center"
+            android:padding="0dp" />
+
+        <TextView
+            android:id="@+id/txv_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+            android:drawablePadding="0dp"
+            android:drawableTop="@drawable/tab_menu_add"
+            android:gravity="center"
+            android:padding="0dp" />
+
+        <TextView
+            android:id="@+id/txv_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+            android:drawablePadding="0dp"
+            android:drawableTop="@drawable/tab_menu_user"
+            android:gravity="center"
+            android:padding="0dp" />
+
+</LinearLayout>
+
+

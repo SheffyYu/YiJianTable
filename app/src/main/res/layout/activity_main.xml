@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainColorWhite"
+    tools:context="com.example.lenovo.yijiantable.MainActivity">
+
+<!-- 设置app标题-->
+    <include layout="@layout/activity_titile_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/title">
+    </include>
+
+
+
+    <!--底部导航栏-->
+    <include layout="@layout/activity_navigation_bar"
+        android:id="@+id/activity_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+    </include>
+
+    <!--筛选与搜索的工具栏-->
+    <include layout="@layout/activity_search_toorbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/search_toolbar"
+        android:layout_below="@id/title">
+
+    </include>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_toolbar"
+        android:layout_above="@id/activity_navigation_bar"
+        android:id="@+id/fl_home">
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="@string/app_name"-->
+            <!--android:textSize="50sp"-->
+            <!--android:textColor="@color/mainColorPink"/>-->
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <TextView
+              android:id="@+id/txv_createfile"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:drawableLeft="@drawable/tab_home_createfile"
+              android:paddingLeft="15dp"
+              android:paddingTop="15dp"/>
+
+          <TextView
+              android:id="@+id/txv_filename"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/filename"
+              android:layout_toRightOf="@id/txv_createfile"
+              android:textColor="@color/mainColorBlue"
+              android:textSize="18sp"
+              android:paddingLeft="10dp"
+              android:paddingTop="15dp"
+              />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/time"
+              android:textColor="@color/mainColorBlue"
+              android:textSize="10dp"
+              android:layout_below="@id/txv_filename"
+              android:layout_toRightOf="@id/txv_createfile"
+              android:paddingLeft="10dp"
+              android:paddingTop="0dp"
+
+              />
+
+      </RelativeLayout>
+
+
+    </FrameLayout>
+
+
+
+
+</RelativeLayout>
