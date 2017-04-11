@@ -15,12 +15,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".CreateHeader"
+        <activity
+            android:name=".CreateHeader"
             android:configChanges="keyboard"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"></activity>
-        <activity android:name=".TitileLayout"></activity>
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".TitileLayout" />
+        <activity android:name=".CountNum"/>
+        <activity android:name=".Requirements"></activity>
     </application>
 
 </manifest>

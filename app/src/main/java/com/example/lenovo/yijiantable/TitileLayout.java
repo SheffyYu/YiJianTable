@@ -13,6 +13,5 @@ public class TitileLayout extends AppCompatActivity {
         mToolbar=(Toolbar)findViewById(R.id.toolbar);
         mToolbar.setTitle("");
         setSupportActionBar(mToolbar);
-
     }
 }
