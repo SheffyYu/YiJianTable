@@ -51,6 +51,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content">
 
+          <!--左边的创建文件图片-->
           <TextView
               android:id="@+id/txv_createfile"
               android:layout_width="wrap_content"
@@ -59,6 +60,7 @@
               android:paddingLeft="15dp"
               android:paddingTop="15dp"/>
 
+          <!--文件名-->
           <TextView
               android:id="@+id/txv_filename"
               android:layout_width="wrap_content"
@@ -69,8 +71,13 @@
               android:textSize="18sp"
               android:paddingLeft="10dp"
               android:paddingTop="15dp"
-              />
+              android:maxLines="1"
+              android:maxEms="7"
+              android:ellipsize="end"
+              android:visibility="visible"
+               />
 
+          <!--文件名之下的时间-->
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -81,7 +88,28 @@
               android:layout_toRightOf="@id/txv_createfile"
               android:paddingLeft="10dp"
               android:paddingTop="0dp"
+              />
 
+          <TextView
+              android:id="@+id/txv_state"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/doing"
+              android:textSize="20sp"
+              android:textColor="@color/mainColorBlue"
+              android:layout_toRightOf="@id/txv_filename"
+              android:paddingTop="19dp"
+              android:paddingLeft="20dp"/>
+
+          <!--右边的进度条-->
+          <TextView
+              android:id="@+id/txv_progress"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:drawableRight="@drawable/tab_home_progress"
+              android:layout_toRightOf="@id/txv_state"
+              android:paddingTop="15dp"
+              android:paddingLeft="35dp"
               />
 
       </RelativeLayout>
