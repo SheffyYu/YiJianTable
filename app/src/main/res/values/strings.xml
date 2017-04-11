@@ -8,4 +8,5 @@
     <string name="time">2017.04.05</string>
     <string name="doing">正在填写</string>
     <string name="finish">成功导入</string>
+    <string name="doing_user">正在建设中...</string>
 </resources>

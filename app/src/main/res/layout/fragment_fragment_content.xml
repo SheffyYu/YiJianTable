@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
+        android:text="@string/doing_user"
         android:textColor="@color/mainColorPink"
         android:textSize="20sp"
         android:id="@+id/txt_fg"/>
