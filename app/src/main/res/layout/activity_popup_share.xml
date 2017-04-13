@@ -3,13 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_popup_share"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="com.example.lenovo.yijiantable.PopupShare">
 
     <LinearLayout
         android:id="@+id/ly_share"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="vertical">
 
@@ -23,21 +23,24 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@drawable/tab_share_link"/>
+                android:drawableTop="@drawable/tab_share_link"
+                android:paddingBottom="20dp"/>
 
             <TextView
                 android:id="@+id/txv_qq"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@drawable/tab_share_qq"/>
+                android:drawableTop="@drawable/tab_share_qq"
+                android:paddingBottom="20dp"/>
 
             <TextView
                 android:id="@+id/txv_wechat"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:drawableTop="@drawable/tab_share_wechat"/>
+                android:drawableTop="@drawable/tab_share_wechat"
+                android:paddingBottom="20dp"/>
         </LinearLayout>
 
         <TextView

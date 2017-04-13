@@ -25,14 +25,16 @@
                android:layout_width="0dp"
                android:layout_weight="1"
                android:layout_height="wrap_content"
-               android:drawableTop="@drawable/tab_popup_pickupheader" />
+               android:drawableTop="@drawable/tab_popup_pickupheader"
+               android:paddingBottom="20dp"/>
 
            <TextView
                android:id="@+id/txv_createheader"
                android:layout_width="0dp"
                android:layout_height="wrap_content"
                android:layout_weight="1"
-               android:drawableTop="@drawable/tab_popup_createheader"/>
+               android:drawableTop="@drawable/tab_popup_createheader"
+               android:paddingBottom="20dp"/>
 
        </LinearLayout>
 
