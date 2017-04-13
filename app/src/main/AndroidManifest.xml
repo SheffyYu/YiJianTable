@@ -19,7 +19,8 @@
         <activity android:name=".TitileLayout" />
         <activity android:name=".NavigationBar" />
         <activity android:name=".SearchToorbar" />
-        <activity android:name=".PopupHeader"></activity>
+        <activity android:name=".PopupHeader" />
+        <activity android:name=".PopupShare"></activity>
     </application>
 
 </manifest>

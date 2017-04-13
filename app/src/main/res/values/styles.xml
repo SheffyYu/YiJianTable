@@ -10,7 +10,7 @@
     </style>
 
     <!--弹出框弹出效果-->
-    <style name="take_photo_anim" parent="android:Animation">
+    <style name="take_popup_anim" parent="android:Animation">
         <item name="android:windowEnterAnimation">@animator/pop_enter_anim</item>
         <item name="android:windowExitAnimation">@animator/pop_exit_anim</item>
     </style>

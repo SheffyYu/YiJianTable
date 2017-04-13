@@ -1,7 +1,7 @@
 package com.example.lenovo.yijiantable;
 
 /**
- * Description:创建表头和提取表头的弹出框
+ * Description:分享弹出框
  */
 
 import android.content.Context;
@@ -11,31 +11,30 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class PopupHeader extends PopupWindow {
+public class PopupShare extends PopupWindow {
 
     private View view;
     private Context context;
-    private TextView txv_close;         //关闭弹出框
-    private TextView txv_pickheader;    //提取表头
-    private TextView txv_createheader;  //创建表头
+    private TextView txv_close;     //关闭弹出框
+    private TextView txv_qq;        //分享qq
+    private TextView txv_link;      //分享链接
+    private TextView txv_wechat;    //分享微信
 
-
-
-    public PopupHeader(Context context,View.OnClickListener itemsOnClick){
-        this.view= LayoutInflater.from(context).inflate(R.layout.activity_popup_header,null);
+    public PopupShare(Context context,View.OnClickListener itemsOnClick){
+        this.view= LayoutInflater.from(context).inflate(R.layout.activity_popup_share,null);
 
         //UI组件初始化
         txv_close=(TextView)view.findViewById(R.id.txv_close);
-        txv_createheader=(TextView)view.findViewById(R.id.txv_createheader);
-        txv_pickheader=(TextView)view.findViewById(R.id.txv_pickheader);
+        txv_link=(TextView)view.findViewById(R.id.txv_link);
+        txv_qq=(TextView)view.findViewById(R.id.txv_qq);
+        txv_wechat=(TextView)view.findViewById(R.id.txv_wechat);
 
         //事件绑定
-        //关闭按钮
+        //关闭
         txv_close.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 //销毁弹出框
@@ -43,18 +42,20 @@ public class PopupHeader extends PopupWindow {
             }
         });
 
-        txv_pickheader.setOnClickListener(itemsOnClick);        //提取表头
-        txv_createheader.setOnClickListener(itemsOnClick);      //创建表头
+        //分享的事件绑定
+        txv_link.setOnClickListener(itemsOnClick);      //分享链接
+        txv_qq.setOnClickListener(itemsOnClick);        //分享qq
+        txv_wechat.setOnClickListener(itemsOnClick);    //分享微信
 
         //设置外部可点击
         this.setOutsideTouchable(true);
 
         // mMenuView添加OnTouchListener监听判断获取触屏位置如果在选择外面则销毁弹出框
-        this.view.setOnTouchListener(new OnTouchListener() {
+        this.view.setOnTouchListener(new View.OnTouchListener() {
 
             public boolean onTouch(View v, MotionEvent event) {
 
-                int height = view.findViewById(R.id.ly_popup).getTop();
+                int height = view.findViewById(R.id.ly_share).getTop();
 
                 int y = (int) event.getY();
                 if (event.getAction() == MotionEvent.ACTION_UP) {
@@ -85,5 +86,4 @@ public class PopupHeader extends PopupWindow {
         this.setAnimationStyle(R.style.take_popup_anim);
 
     }
-
 }

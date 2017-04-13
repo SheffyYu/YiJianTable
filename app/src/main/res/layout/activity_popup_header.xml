@@ -6,35 +6,44 @@
     android:layout_height="wrap_content"
     tools:context="com.example.lenovo.yijiantable.PopupHeader">
 
-    <TextView
-        android:id="@+id/txv_close"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:drawableTop="@drawable/tab_popup_close"
-        android:layout_centerHorizontal="true"/>
+   <LinearLayout
+       android:id="@+id/ly_popup"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:orientation="vertical">
 
-  <LinearLayout
-      android:id="@+id/ly_tableheader"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="horizontal"
-      android:layout_above="@id/txv_close">
-      <TextView
-          android:id="@+id/txv_pickheader"
-          android:layout_width="0dp"
-          android:layout_weight="1"
-          android:layout_height="wrap_content"
-          android:drawableTop="@drawable/tab_popup_pickupheader" />
 
-      <TextView
-          android:id="@+id/txv_createheader"
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_weight="1"
-          android:drawableTop="@drawable/tab_popup_createheader"/>
 
-  </LinearLayout>
+       <LinearLayout
+           android:id="@+id/ly_tableheader"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+           <TextView
+               android:id="@+id/txv_pickheader"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:drawableTop="@drawable/tab_popup_pickupheader" />
+
+           <TextView
+               android:id="@+id/txv_createheader"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:drawableTop="@drawable/tab_popup_createheader"/>
+
+       </LinearLayout>
+
+       <TextView
+           android:id="@+id/txv_close"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:drawableTop="@drawable/tab_popup_close"/>
+
+   </LinearLayout>
 
 
 </RelativeLayout>
